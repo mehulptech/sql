@@ -64,12 +64,14 @@ AdventureWorks Schema. Not in any particular order, but some of these things wou
 Like Employee and Shift tables can be grouped together, customer and customer_address can be
 grouped together and book, order, sales table can be grouped together in a different colour
 notation for better readability and understanding of the architecture.
+
 2) Majority of the tables in the AdventureWorks Schema has the "ModifiedDate" column signifying
 the tracking of changes happened in the database. This helps with the audit trail of the data
-management in terms of carrying out various Create, Read, Update and Delete (CRUD) operations
+management in terms of carrying out various Create, Read, Update and Delete (CRUD) operations.
+
 3) AdventureWorks Schema also uses a separate group of tables that resides under "dbo" to record
 host of information like various accesses to the database, database errors, and meta data about
-the database like version, modified date, etc. which helps with the server upgrades and migrations when needed.
+the database like version, modified date, etc. which helps with the server upgrades and migrations.
 ```
 
 # Criteria
