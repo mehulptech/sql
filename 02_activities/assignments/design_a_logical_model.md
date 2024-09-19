@@ -20,13 +20,25 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 _Hint, search type 1 vs type 2 slowly changing dimensions._
 
-Schema for Overwriting (Type 1):
+## Schema for Overwriting (Type 1):
+
 ![ER Diagram](./model-design-answer-3-type-1.png)
+
+## Schema for Retaining Changes (Type 2):
+
+![ER Diagram](./model-design-answer-3-type-2.png)
 
 Bonus: Are there privacy implications to this, why or why not?
 
 ```
-Your answer...
+Yes, there are both security and privacy implications of deciding to go with either Type 1 or Type 2 table schema.
+
+With Type 1 (overwrite), the customer always has one single address stored at any given time, while all their old addresses are overwritten. This helps retain lesser amount of personal identifiable information about the customer.
+Typical Usage of this schema: This type of schema is ideal for an school/college student record database allowing to forget old student addresses and overwriting it with the new one.
+
+With Type 2 (retaining old historical changes), all prior addresses of the customer are retained unless explicitly deleted from the system. This creates higher security and privacy issues compared to Type 1 schema.
+Typical Usage of this schema: May be a credit score company would like to retain all the customer addresses to make sure they can validate a customer based on any of the older addresses. Or, an ecommerce store allowing customer to add any number of shipping addresses.
+
 ```
 
 ## Question 4
