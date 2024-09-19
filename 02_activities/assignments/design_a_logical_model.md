@@ -20,6 +20,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 _Hint, search type 1 vs type 2 slowly changing dimensions._
 
+Schema for Overwriting (Type 1):
+![ER Diagram](./model-design-answer-3-type-1.png)
+
 Bonus: Are there privacy implications to this, why or why not?
 
 ```
