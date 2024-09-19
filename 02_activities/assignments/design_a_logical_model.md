@@ -1,5 +1,7 @@
 # Assignment 1: Design a Logical Model
 
+# Participant Name: Mehulkumar Patel
+
 ## Question 1
 
 Create a logical model for a small bookstore. 📚
@@ -31,13 +33,21 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 Bonus: Are there privacy implications to this, why or why not?
 
 ```
-** Yes, there are both security and privacy implications of deciding to go with either Type 1 or Type 2 table schema.
+Yes, there are both security and privacy implications of deciding to go with either Type 1 or Type 2 table
+schema.
 
-1) With Type 1 (overwrite), the customer always has one single address stored at any given time, while all their old addresses are overwritten. This helps retain lesser amount of personal identifiable information about the customer.
-==> Typical Usage of this schema: This type of schema is ideal for an school/college student record database allowing to forget old student addresses and overwriting it with the new one.
+1) With Type 1 (overwrite), the customer always has one single address stored at any given time,
+while all their old addresses are overwritten. This helps retain lesser amount of personal identifiable
+information about the customer.
+==> Typical Usage of this schema: This type of schema is ideal for an school/college student record
+database allowing to forget old student addresses and overwriting it with the new one.
 
-2) With Type 2 (retaining old historical changes), all prior addresses of the customer are retained unless explicitly deleted from the system. This creates higher security and privacy issues compared to Type 1 schema.
-==> Typical Usage of this schema: May be a credit score company would like to retain all the customer addresses to make sure they can validate a customer based on any of the older addresses. Or, an ecommerce store allowing customer to add any number of shipping addresses. **
+2) With Type 2 (retaining old historical changes), all prior addresses of the customer are retained
+unless explicitly deleted from the system. This creates higher security and privacy issues compared to
+Type 1 schema.
+==> Typical Usage of this schema: May be a credit score company would like to retain all the customer
+addresses to make sure they can validate a customer based on any of the older addresses. Or,
+an ecommerce store allowing customer to add any number of shipping addresses.
 
 ```
 
@@ -48,12 +58,18 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 
 ```
-**
-Yes, there is a lot of things that I might prefer to change in my ERD when I see the AdventureWorks Schema. Not in any particular order, but some of these things would be:
-1) Better color coding to group similar category of tables together for easy identification. Like Employee and Shift tables can be grouped together, customer and customer_address can be grouped together and book, order, sales table can be grouped together in a different colour notation for better readability and understanding of the architecture.
-2) Majority of the tables in the AdventureWorks Schema has the "ModifiedDate" column signifying the tracking of changes happened in the database. This helps with the audit trail of the data management in terms of carrying out various Create, Read, Update and Delete (CRUD) operations
-3) AdventureWorks Schema also uses a separate group of tables that resides under "dbo" to record host of information like various accesses to the database, database errors, and meta data about the database like version, modified date, etc. which helps with the server upgrades and migrations when needed.
-**
+Yes, there is a lot of things that I might prefer to change in my ERD when I see the
+AdventureWorks Schema. Not in any particular order, but some of these things would be:
+1) Better color coding to group similar category of tables together for easy identification.
+Like Employee and Shift tables can be grouped together, customer and customer_address can be
+grouped together and book, order, sales table can be grouped together in a different colour
+notation for better readability and understanding of the architecture.
+2) Majority of the tables in the AdventureWorks Schema has the "ModifiedDate" column signifying
+the tracking of changes happened in the database. This helps with the audit trail of the data
+management in terms of carrying out various Create, Read, Update and Delete (CRUD) operations
+3) AdventureWorks Schema also uses a separate group of tables that resides under "dbo" to record
+host of information like various accesses to the database, database errors, and meta data about
+the database like version, modified date, etc. which helps with the server upgrades and migrations when needed.
 ```
 
 # Criteria
